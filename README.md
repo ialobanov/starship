@@ -20,6 +20,7 @@ truncation_length = 0
 truncate_to_repo = false
 format = '[$path]($style)[$read_only]($read_only_style) '
 fish_style_pwd_dir_length = 0
+use_logical_path = true
 
 [git_branch]
 symbol = '🌱 '
@@ -70,4 +71,5 @@ discharging_symbol = '󰂎 '
 threshold = 80
 style = 'bold yellow'
 discharging_symbol = '󰁽 '
+
 ```
