@@ -18,12 +18,13 @@ $character"""
 [directory]
 truncation_length = 0
 truncate_to_repo = false
-format = '[$path]($style)[$read_only]($read_only_style) '
+format = '[$path ]($style)'
+# format = '[$path]($style)[$read_only]($read_only_style) '
 fish_style_pwd_dir_length = 0
 use_logical_path = true
 
 [git_branch]
-symbol = '🌱 '
+symbol = ' '
 truncation_length = 4
 truncation_symbol = ''
 #ignore_branches = ['master', 'main']
@@ -45,7 +46,17 @@ deleted = '🗑'
 symbol = ' '
 
 [lua]
-format = 'via [󰢱 $version](bold blue) '
+format = 'via [$symbol($version )]($style)'
+symbol = ' '
+
+[jobs]
+symbol = ' '
+style = 'red'
+number_threshold = 1
+format = '[$symbol]($style)'
+
+[cmd_duration]
+min_time = 5000
 
 [docker_context]
 format = 'via [🐋 $context](blue bold)'
@@ -64,12 +75,12 @@ discharging_symbol = '💀 '
 
 [[battery.display]]
 threshold = 10
-style = 'bold red'
+style = 'red'
 discharging_symbol = '󰂎 '
 
 [[battery.display]]
 threshold = 80
-style = 'bold yellow'
+style = 'yellow'
 discharging_symbol = '󰁽 '
 
 ```
