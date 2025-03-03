@@ -1,5 +1,9 @@
 # My Starship configuration for Windows machine
 
+```powershell
+vim $env:USERPROFILE\starship.toml
+```
+
 ```toml
 format = """
 $directory\
