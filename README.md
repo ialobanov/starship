@@ -29,7 +29,7 @@ use_logical_path = true
 
 [git_branch]
 symbol = ' '
-truncation_length = 4
+truncation_length = 255
 truncation_symbol = ''
 #ignore_branches = ['master', 'main']
 
