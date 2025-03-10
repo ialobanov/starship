@@ -1,10 +1,3 @@
-# My Starship configuration for Windows machine
-
-```powershell
-vim $env:USERPROFILE\starship.toml
-```
-
-```toml
 format = """
 $directory\
 $git_branch\
@@ -25,26 +18,28 @@ truncate_to_repo = false
 format = '[$path ]($style)'
 # format = '[$path]($style)[$read_only]($read_only_style) '
 fish_style_pwd_dir_length = 0
-use_logical_path = true
+use_logical_path = false
 
 [git_branch]
 symbol = ' '
 truncation_length = 255
 truncation_symbol = ''
-#ignore_branches = ['master', 'main']
 
 [git_status]
-conflicted = '🏳'
-ahead = '🏎💨'
-behind = '😰'
-diverged = '😵'
-up_to_date = '✓'
-untracked = '🤷'
-stashed = '📦'
-modified = '📝'
-staged = '[++\($count\)](green)'
-renamed = '👅'
-deleted = '🗑'
+up_to_date = '󰸞'
+
+# [git_status]
+# conflicted = '🏳'
+# ahead = '🏎💨'
+# behind = '😰'
+# diverged = '😵'
+# up_to_date = '󰸞'
+# untracked = '🤷'
+# stashed = '📦'
+# modified = '📝'
+# staged = '[++\($count\)](green)'
+# renamed = '👅'
+# deleted = '🗑️'
 
 [fill]
 symbol = ' '
@@ -87,4 +82,3 @@ threshold = 80
 style = 'yellow'
 discharging_symbol = '󰁽 '
 
-```
