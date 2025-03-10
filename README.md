@@ -1,3 +1,10 @@
+# My Starship configuration
+
+```powershell
+vim $env:USERPROFILE\starship.toml
+```
+
+```toml
 format = """
 $directory\
 $git_branch\
@@ -81,4 +88,5 @@ discharging_symbol = '󰂎 '
 threshold = 80
 style = 'yellow'
 discharging_symbol = '󰁽 '
+```
 
