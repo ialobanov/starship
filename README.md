@@ -1,4 +1,4 @@
-# My Starship configuration
+# Starship configuration
 
 ```powershell
 vim $env:USERPROFILE\starship.toml
