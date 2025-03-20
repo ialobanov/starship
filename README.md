@@ -15,9 +15,12 @@ $battery\
 $lua\
 $jobs\
 $cmd_duration\
-$line_break\
+$new_line
 $docker_context\
 $character"""
+
+[line_break]
+disabled = true
 
 [directory]
 truncation_length = 0
@@ -34,19 +37,6 @@ truncation_symbol = ''
 
 [git_status]
 up_to_date = '󰸞'
-
-# [git_status]
-# conflicted = '🏳'
-# ahead = '🏎💨'
-# behind = '😰'
-# diverged = '😵'
-# up_to_date = '󰸞'
-# untracked = '🤷'
-# stashed = '📦'
-# modified = '📝'
-# staged = '[++\($count\)](green)'
-# renamed = '👅'
-# deleted = '🗑️'
 
 [fill]
 symbol = ' '
