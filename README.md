@@ -46,22 +46,24 @@ truncation_length = 255
 truncation_symbol = ''
 
 [git_status]
-conflicted = " "
-ahead = "⇡${count} "
-behind = "⇣${count} "
-diverged = "⇕⇡${ahead_count}⇣${behind_count} "
-untracked = " "
-stashed = " "
-modified = " "
-staged = " "
-renamed = " "
-deleted = " "
+conflicted = ' '
+ahead = '⇡${count} '
+behind = '⇣${count} '
+diverged = '⇕⇡${ahead_count}⇣${behind_count} '
+untracked = ''
+stashed = ''
+modified = ''
+staged = ''
+renamed = ''
+deleted = ''
+up_to_date = '󰗠'
+style = 'bold green'
 
 [time]
 disabled = false
 format = '[$time]($style) '
-time_format = "%H:%M"
-style = "bold yellow"
+time_format = '%H:%M'
+style = 'bold yellow'
 
 [fill]
 symbol = ' '
