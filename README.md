@@ -6,9 +6,11 @@ vim $env:USERPROFILE\starship.toml
 
 ```toml
 format = """
+$hostname\
 $directory\
 $git_branch\
 $git_status\
+$time\
 $fill\
 $memory_usage\
 $battery\
@@ -22,10 +24,18 @@ $character"""
 [line_break]
 disabled = true
 
+[hostname]
+ssh_only = false
+format = '[$hostname]($style) '
+style = 'bold blue'
+
 [directory]
 truncation_length = 0
 truncate_to_repo = false
-format = '[$path ]($style)'
+read_only_style = 'bold red'
+read_only = '🔒'
+#format = '[$path ]($style)'
+format = '[$read_only]($read_only_style)[$path]($style) '
 # format = '[$path]($style)[$read_only]($read_only_style) '
 fish_style_pwd_dir_length = 0
 use_logical_path = false
@@ -36,7 +46,22 @@ truncation_length = 255
 truncation_symbol = ''
 
 [git_status]
-up_to_date = '󰸞'
+conflicted = " "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = " "
+stashed = " "
+modified = " "
+staged = " "
+renamed = " "
+deleted = " "
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = "%H:%M"
+style = "bold yellow"
 
 [fill]
 symbol = ' '
