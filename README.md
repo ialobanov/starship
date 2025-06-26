@@ -4,6 +4,10 @@
 vim $env:USERPROFILE\starship.toml
 ```
 
+```shell
+vim ~/.config/starship.toml
+```
+
 ```toml
 format = """
 $hostname\
