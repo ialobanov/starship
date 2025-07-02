@@ -93,7 +93,7 @@ disabled = false
 threshold = -1
 symbol = ' '
 format = '$symbol [${ram}]($style) '
-style = 'green'
+style = 'bold green'
 
 [battery]
 full_symbol = '🔋 '
