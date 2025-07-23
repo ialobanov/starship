@@ -11,16 +11,15 @@ vim ~/.config/starship.toml
 ```toml
 format = """
 $hostname\
+$memory_usage\
 $directory\
 $git_branch\
 $git_status\
 $time\
 $fill\
-$memory_usage\
 $battery\
 $lua\
 $jobs\
-$cmd_duration\
 $new_line
 $docker_context\
 $character"""
@@ -30,8 +29,15 @@ disabled = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname]($style) '
+format = '[$hostname]($style)'
 style = 'bold blue'
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ''
+format = '$symbol [\(${ram}\)]($style) '
+style = 'bold green'
 
 [directory]
 truncation_length = 0
@@ -82,18 +88,8 @@ style = 'red'
 number_threshold = 1
 format = '[$symbol]($style)'
 
-[cmd_duration]
-min_time = 5000
-
 [docker_context]
 format = 'via [🐋 $context](blue bold)'
-
-[memory_usage]
-disabled = false
-threshold = -1
-symbol = ' '
-format = '$symbol [${ram}]($style) '
-style = 'bold green'
 
 [battery]
 full_symbol = '🔋 '
