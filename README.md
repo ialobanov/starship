@@ -12,10 +12,10 @@ vim ~/.config/starship.toml
 format = """
 $hostname\
 $memory_usage\
+$time\
 $directory\
 $git_branch\
 $git_status\
-$time\
 $fill\
 $battery\
 $lua\
@@ -36,7 +36,7 @@ style = 'bold blue'
 disabled = false
 threshold = -1
 symbol = ''
-format = '$symbol [\(${ram}\)]($style) '
+format = '$symbol [\[${ram}\]]($style) '
 style = 'bold green'
 
 [directory]
@@ -44,9 +44,7 @@ truncation_length = 0
 truncate_to_repo = false
 read_only_style = 'bold red'
 read_only = '🔒'
-#format = '[$path ]($style)'
-format = '[$read_only]($read_only_style)[$path]($style) '
-# format = '[$path]($style)[$read_only]($read_only_style) '
+format = ' [$read_only]($read_only_style)[$path]($style) '
 fish_style_pwd_dir_length = 0
 use_logical_path = false
 
@@ -71,7 +69,7 @@ style = 'bold green'
 
 [time]
 disabled = false
-format = '[$time]($style) '
+format = '[$time]($style)'
 time_format = '%H:%M'
 style = 'bold yellow'
 
